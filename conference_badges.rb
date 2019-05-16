@@ -20,11 +20,9 @@ def assign_rooms(speakers)
 end
 
 def printer
-  batch_badge_creator.collect do |badges|
-    puts badges
+  badge = []
+  batch_badge_creator.each do |badges|
+    badge << badges
   end
-  
-  assign_rooms.collect do |room_assignments|
-    puts room_assignments
-  end
+  badge
 end
